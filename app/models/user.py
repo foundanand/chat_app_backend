@@ -8,5 +8,5 @@ class User(BaseModel):
     userName: str = Field(..., description="User's unique username for login")
     userEmail: EmailStr = Field(..., description="User's unique email for login")
     userPassword: str = Field(..., description="User's password, must have at least 8 characters")
-    createdAt: datetime = Field(default_factory=datetime.utcnow, description="Date and time when the user was created")
-    updatedAt: datetime = Field(default_factory=datetime.utcnow, description="Date and time when the user was last updated")
+    createdAt: datetime = Field(default_factory=datetime.timestamp, description="Date and time when the user was created")
+    updatedAt: datetime = Field(default_factory=datetime.timestamp, description="Date and time when the user was last updated")
